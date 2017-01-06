@@ -22,10 +22,6 @@ internal class WallClockTest {
     }
 
     @Test
-    fun fivePast() = assertEquals(arrayListOf("five", "past"),
-            wallClock.minutes[5])
-
-    @Test
     fun fiveTo() = assertEquals(arrayListOf("five", "to"),
             wallClock.minutes[56])
 
@@ -44,4 +40,29 @@ internal class WallClockTest {
     @Test
     fun twentyFiveTo() = assertEquals(arrayListOf("twenty", "five", "to"),
             wallClock.minutes[31])
+
+    @Test
+    fun fivePast() = assertEquals(arrayListOf("five", "past"),
+            wallClock.minutes[1])
+
+    @Test
+    fun tenPast() = assertEquals(arrayListOf("ten", "past"),
+            wallClock.minutes[11])
+
+    @Test
+    fun quarterPast() = assertEquals(arrayListOf("quarter", "past"),
+            wallClock.minutes[16])
+
+    @Test
+    fun twentyPast() = assertEquals(arrayListOf("twenty", "past"),
+            wallClock.minutes[21])
+
+    @Test
+    fun twentyFivePast() = assertEquals(arrayListOf("twenty", "five",
+            "past"),
+            wallClock.minutes[26])
+
+    @Test
+    fun halfPast() = assertEquals(arrayListOf("half", "past"),
+            wallClock.minutes[30])
 }
