@@ -15,11 +15,10 @@ internal class WallClockTest {
     }
 
     @Test
-    fun wrongMinutes() {
-        assertThrows<Exception>(IllegalArgumentException::class.java) {
-            wallClock.minutes[-1]
-        }
-    }
+    fun wrongMinutes() = assertThrows<Exception>(
+            IllegalArgumentException::class.java) {
+        wallClock.minutes[-1]
+    }!!
 
     @Test
     fun fiveTo() = assertEquals(arrayListOf("five", "to"),
