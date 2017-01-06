@@ -21,6 +21,12 @@ internal class WallClockTest {
     }!!
 
     @Test
+    fun noGaps() {
+        for (minute in 0..60)
+            wallClock.minutes[minute]
+    }
+
+    @Test
     fun fiveTo() = assertEquals(arrayListOf("five", "to"),
             wallClock.minutes[56])
 
